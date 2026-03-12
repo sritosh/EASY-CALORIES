@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Daily Tracker</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+<a href="index.html">Calculator</a>
+<a href="tracker.html">Daily Tracker</a>
+</nav>
+
+<div class="container">
+
+<h1>Daily Progress</h1>
+
+<div class="card">
+
+<input id="dayWeight" placeholder="Today's Weight (kg)">
+<input id="dayCalories" placeholder="Calories Today">
+
+<button onclick="saveDay()">Save Today</button>
+
+<select onchange="drawGraph(this.value)">
+<option value="7">Last 7 days</option>
+<option value="30">Last 30 days</option>
+<option value="all">All time</option>
+</select>
+
+<canvas id="graph" width="320" height="180"></canvas>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
